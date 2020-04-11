@@ -10,8 +10,8 @@ class Item
     resp = Rack::Response.new
     req = Rack::Request.new(env)
  
-    if req.path=="/songs"
-      resp.write "You requested the songs"
+    if req.path=="/items/#{@name}"
+      resp.write ""
     else
       resp.write "Route not found"
       resp.status = 404
